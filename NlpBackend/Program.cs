@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +17,9 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
-
 builder.Services.AddSingleton(builder.Configuration);
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 var app = builder.Build();
 

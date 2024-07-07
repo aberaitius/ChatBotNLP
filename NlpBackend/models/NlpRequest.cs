@@ -1,7 +1,7 @@
 namespace NlpBackend.Models
 {
-    public class NlpRequest
+    public class ChatRequest
     {
-        public string Message { get; set; }
+        public string? Message { get; set; }
     }
 }
