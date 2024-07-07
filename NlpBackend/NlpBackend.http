@@ -1,0 +1,6 @@
+@NlpBackend_HostAddress = http://localhost:5280
+
+GET {{NlpBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
